@@ -1,0 +1,153 @@
+* 
+{
+    box-sizing: border-box;
+}
+body 
+{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: lavender;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    margin-top: 0.5rem;
+}
+span
+{
+    color: lavender;
+    padding-left: 20px;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    display: inline-flex;
+    align-items: center;
+}
+span::after 
+{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: lavender;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+h2
+{
+    display: flex;
+    justify-content: center;
+    height: 32vh;
+    color: #ffffff;
+    font-size: 30px;
+    animation: glow 2s infinite alternate;
+    height: 14rem;
+    
+}
+
+@keyframes blink 
+{
+    0%, 100% 
+    {
+        opacity: 1;
+    }
+    50% 
+    {
+        opacity: 0;
+    }
+}
+@keyframes glow
+{
+    from
+    {
+        text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7, 0 0 30px #00ffe7;
+    }
+    to
+    {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+
+@media (max-width: 768px)
+{
+    body
+    {
+        padding: 12px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1
+    {
+        font-size: 4rem;
+        padding: 0.5rem;
+        flex-direction: column;
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    h2
+    {
+        font-size: 4.5vw;
+        height: auto;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    span::after
+    {
+        height: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    span {
+        padding-left: 10px;
+    }
+
+    span::after {
+        height: 0.9em;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+}
